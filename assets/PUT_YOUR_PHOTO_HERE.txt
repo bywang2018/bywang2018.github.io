@@ -1,0 +1,9 @@
+Put your portrait in this folder as:
+
+profile.jpg
+
+Then edit assets/content.js:
+
+photo: "assets/profile.jpg",
+
+Recommended size: square or near-square, at least 600 x 600 px.
