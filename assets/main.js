@@ -10,12 +10,24 @@ function setAttribute(selector, name, value) {
   if (element && value) element.setAttribute(name, value);
 }
 
+function normalizeHref(href) {
+  if (!href) return "#";
+  const trimmed = href.trim();
+  if (/^[a-z][a-z0-9+.-]*:/i.test(trimmed)) return trimmed;
+  const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+  return isEmail ? `mailto:${trimmed}` : trimmed;
+}
+
+function hasUsableHref(link) {
+  return link.label && normalizeHref(link.href) !== "#";
+}
+
 function createLink(link, className) {
   const anchor = document.createElement("a");
   anchor.textContent = link.label;
-  anchor.href = link.href || "#";
+  anchor.href = normalizeHref(link.href);
   if (className) anchor.className = className;
-  if (anchor.hostname && anchor.hostname !== window.location.hostname) {
+  if (/^https?:$/.test(anchor.protocol) && anchor.hostname !== window.location.hostname) {
     anchor.target = "_blank";
     anchor.rel = "noreferrer";
   }
@@ -27,7 +39,7 @@ function renderLinks(selector, links) {
   if (!container) return;
 
   container.innerHTML = "";
-  links.filter((link) => link.label).forEach((link) => {
+  links.filter(hasUsableHref).forEach((link) => {
     container.appendChild(createLink(link));
   });
 }
@@ -169,7 +181,23 @@ function renderPublications(publications) {
     const title = document.createElement("h3");
     title.textContent = publication.title;
 
+    const badges = document.createElement("div");
+    badges.className = "pub-badges";
+    (publication.levels || []).forEach((level) => {
+      const badge = document.createElement("span");
+      badge.className = "pub-badge";
+      badge.textContent = level;
+      badges.appendChild(badge);
+    });
+    if (publication.correspondingAuthor) {
+      const badge = document.createElement("span");
+      badge.className = "pub-badge pub-badge-corresponding";
+      badge.textContent = "通讯作者";
+      badges.appendChild(badge);
+    }
+
     const authors = document.createElement("p");
+    authors.className = "authors";
     (publication.authors || []).forEach((author, index) => {
       if (index > 0) authors.appendChild(document.createTextNode(", "));
       if (author.highlight) {
@@ -188,9 +216,12 @@ function renderPublications(publications) {
 
     const links = document.createElement("div");
     links.className = "pub-links";
-    (publication.links || []).forEach((link) => links.appendChild(createLink(link)));
+    (publication.links || []).filter(hasUsableHref).forEach((link) => links.appendChild(createLink(link)));
 
-    body.append(title, authors, venue, links);
+    body.append(title);
+    if (badges.childElementCount) body.appendChild(badges);
+    body.append(authors, venue);
+    if (links.childElementCount) body.appendChild(links);
     article.append(year, body);
     list.appendChild(article);
   });

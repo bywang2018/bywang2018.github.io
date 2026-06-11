@@ -14,7 +14,7 @@ window.SITE_CONTENT = {
   site: {
     language: "en",
     title: "Boying Wang | Academic Homepage",
-    description: "Academic personal homepage for research, publications, teaching, and service."
+    description: "Boying Wang's academic homepage: computer vision, object detection, image fusion, publications, and service."
   },
 
   // TODO: Your photo, name, position, affiliation, short intro, and profile links.
@@ -23,10 +23,10 @@ window.SITE_CONTENT = {
     title: "Lecturer",
     affiliation: "School of Computer Science and Technology, North University of China",
     photo: "assets/profile-placeholder.svg",
-    photoAlt: "Portrait of Your Name",
-    summary: "",
+    photoAlt: "Portrait of Boying Wang",
+    summary: "My research focuses on computer vision, object detection, image fusion, and image enhancement.",
     links: [
-      { label: "Email", href: "boying24@nuc.edu.cn" },
+      { label: "Email", href: "mailto:boying24@nuc.edu.cn" },
       { label: "Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
       // { label: "GitHub", href: "#" },
       // { label: "CV", href: "#" }
@@ -34,7 +34,7 @@ window.SITE_CONTENT = {
     meta: [
       { label: "Office", value: "Room 508, Software Building" },
       { label: "Location", value: "Taiyuan, Shanxi" },
-      { label: "Focus", value: "AI, Vision, Data" }
+      { label: "Focus", value: "Computer Vision, Image Fusion, Object Detection" }
     ]
   },
 
@@ -42,7 +42,7 @@ window.SITE_CONTENT = {
   hero: {
     kicker: "About",
     title: "Academic profile",
-    description: "I am a lecturer at the School of Computer Science and Technology, North University of China. I received my Ph.D. in 2024 from the Institute of Software, Chinese Academy of Sciences (ISCAS), under the supervision of Prof. Yanjun Wu. My current research interests include object detection, image fusion, and image enhancement.",
+    description: "I am a lecturer at the School of Computer Science and Technology, North University of China(中北大学). I received my Ph.D. in 2024 from the Institute of Software, Chinese Academy of Sciences (ISCAS，中科院软件研究所), under the supervision of Prof. Yanjun Wu(武延军). My current research interests include object detection, image fusion, and image enhancement.",
     stats: []
   },
 
@@ -65,16 +65,16 @@ window.SITE_CONTENT = {
     title: "Research Interests",
     interests: [
       {
-        title: "Machine Learning",
-        description: "Reliable representation learning, evaluation, and deployment for real-world data."
+        title: "Object Detection",
+        description: "Long-tailed recognition, prohibited item detection, and camouflaged object detection."
       },
       {
-        title: "Computer Vision",
-        description: "Visual perception, multimodal reasoning, and efficient model design."
+        title: "Image Fusion",
+        description: "Multisource visual information fusion for robust perception and downstream analysis."
       },
       {
-        title: "Applied AI",
-        description: "Domain-specific systems for science, healthcare, education, or creative tools."
+        title: "Image Enhancement",
+        description: "Underwater image enhancement, domain adaptation, and efficient visual restoration."
       }
     ]
   },
@@ -95,8 +95,9 @@ window.SITE_CONTENT = {
           { name: "Huiyan Han" }
         ],
         venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        levels: ["CCF B 类","Oral"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2026/icassp.pdf" },
           // { label: "Code", href: "#" },
           // { label: "BibTeX", href: "#" }
         ]
@@ -109,12 +110,14 @@ window.SITE_CONTENT = {
           { name: "Peiyuan Liang" },
           { name: "Yuxin Feng" },
           { name: "Weiming Han" },
-          { name: "Boying Wang*", highlight: true},
+          { name: "Boying Wang", highlight: true},
           { name: "Yuanyuan Shen" },
           { name: "Shuangjiao Zhai" },
           { name: "Alex Jinpeng Wang" }
         ],
-        venue: "‌Knowledge-Based Systems",
+        venue: "Knowledge-Based Systems (KBS)",
+        levels: ["CCF C 类", "中科院一区"],
+        correspondingAuthor: true,
         links: [
           { label: "PDF", href: "#" },
           // { label: "Project", href: "#" }
@@ -133,9 +136,10 @@ window.SITE_CONTENT = {
           { name: "Shuangjiao Zhai" },
           { name: "Yuxin Feng" }
         ],
-        venue: "Information Fusion",
+        venue: "Information Fusion (INFFUS)",
+        levels: ["中科院一区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2026/INFFUS.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -151,9 +155,32 @@ window.SITE_CONTENT = {
           { name: "Boying Wang", highlight: true},
           { name: "Long Ma" }
         ],
-        venue: "IEEE Transactions on Circuits and Systems for Video Technology",
+        venue: "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)",
+        levels: ["CCF B 类", "中科院一区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2026/tcsvt.pdf" },
+          // { label: "Dataset", href: "#" }
+        ]
+      },
+      {
+        year: "2025",
+        title: "The Source Image is the Best Attention for Infrared and Visible Image Fusion",
+        authors: [
+          { name: "Song Wang" },
+          { name: "Xie Han"},
+          { name: "Liqun Kuang" },
+          { name: "Boying Wang", highlight: true},
+          { name: "Zhongyu Chen" },
+          { name: "Zherui Qiao" },
+          { name: "Fan Yang" },
+          { name: "Xiaoxia Liu" },
+          { name: "Bingyu Zhang" },
+          { name: "Zhixun Wang" }
+        ],
+        venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        levels: ["CCF A 类"],
+        links: [
+          { label: "PDF", href: "./papers/2025/iccv.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -170,9 +197,10 @@ window.SITE_CONTENT = {
           { name: "Bo Liu" },
           { name: "Jing Liu" }
         ],
-        venue: "IEEE Transactions on Information Forensics and Security",
+        venue: "IEEE Transactions on Information Forensics and Security (TIFS)",
+        levels: ["CCF A 类", "中科院一区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/tifs.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -186,9 +214,10 @@ window.SITE_CONTENT = {
           { name: "Yanjun Wu" },
           { name: "Jing Liu" }
         ],
-        venue: "Expert Systems with Applications",
+        venue: "Expert Systems with Applications (ESWA)",
+        levels: ["CCF C 类", "中科院一区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/eswa.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -204,8 +233,9 @@ window.SITE_CONTENT = {
           { name: "Chen Zhao" }
         ],
         venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        levels: ["CCF B 类"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/HyperSF.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -214,15 +244,17 @@ window.SITE_CONTENT = {
         title: "HyperKAN: Hypergraph Representation Learning with Kolmogorov-Arnold Networks",
         authors: [
           { name: "Xiangfei Fang" },
-          { name: "Boying Wang*", highlight: true},
+          { name: "Boying Wang", highlight: true},
           { name: "Chengying Huan"},
           { name: "Shaonan Ma" },
           { name: "Heng Zhang" },
           { name: "Chen Zhao" }
         ],
         venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        levels: ["CCF B 类"],
+        correspondingAuthor: true,
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/HyperKAN.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -238,9 +270,10 @@ window.SITE_CONTENT = {
           { name: "Rongrong Ni" },
           { name: "Yao Zhao" }
         ],
-        venue: "Neural Networks",
+        venue: "Neural Networks (NN)",
+        levels: ["CCF B 类", "中科院二区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/NN.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -253,9 +286,10 @@ window.SITE_CONTENT = {
           { name: "Libo Zhang" },
           { name: "Yanjun Wu" }
         ],
-        venue: "IEEE Transactions on Circuits and Systems for Video Technology",
+        venue: "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)",
+        levels: ["CCF B 类", "中科院一区"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2023/tcsvt.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       },
@@ -269,9 +303,10 @@ window.SITE_CONTENT = {
           { name: "Xianglong Liu"},
           { name: "Yanjun Wu" }
         ],
-        venue: "Proceedings of the IEEE/CVF international conference on computer vision",
+        venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        levels: ["CCF A 类"],
         links: [
-          { label: "PDF", href: "#" },
+          { label: "PDF", href: "./papers/2025/iccv.pdf" },
           // { label: "Dataset", href: "#" }
         ]
       }
@@ -323,9 +358,9 @@ window.SITE_CONTENT = {
   contact: {
     kicker: "Contact",
     title: "Get In Touch",
-    description: "",
+    description: "🤝 I am open to collaborations and academic discussions. Feel free to reach out!",
     links: [
-      { label: "boying24@nuc.edu.cn", href: "boying24@nuc.edu.cn" },
+      { label: "boying24@nuc.edu.cn", href: "mailto:boying24@nuc.edu.cn" },
       { label: "Google Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
       // { label: "ORCID", href: "#" },
       // { label: "GitHub", href: "#" }

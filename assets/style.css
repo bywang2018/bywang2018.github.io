@@ -30,6 +30,7 @@ body {
 a {
   color: var(--link);
   text-decoration: none;
+  transition: color 160ms ease;
 }
 
 a:hover {
@@ -409,9 +410,40 @@ button {
   font-weight: 650;
 }
 
+.publication-item .authors {
+  color: var(--ink);
+}
+
 .publication-item .venue {
   color: var(--muted);
   font-style: italic;
+}
+
+.pub-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.25rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--muted);
+  padding: 0.04rem 0.42rem;
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.pub-badge-corresponding {
+  border-color: #d7c7a2;
+  background: #fbf7ed;
+  color: #7a5a16;
 }
 
 .pub-links {
