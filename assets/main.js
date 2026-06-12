@@ -62,6 +62,7 @@ function renderProfile(profile) {
   setText("[data-profile-name]", profile.name);
   setText("[data-profile-affiliation]", profile.affiliation);
   setText("[data-profile-summary]", profile.summary);
+  setText("[data-profile-collaboration]", profile.collaboration);
   setAttribute("[data-profile-photo]", "src", profile.photo);
   setAttribute("[data-profile-photo]", "alt", profile.photoAlt || `Portrait of ${profile.name}`);
   renderLinks("[data-profile-links]", profile.links || []);
@@ -255,13 +256,6 @@ function renderTeaching(teaching) {
   });
 }
 
-function renderContact(contact) {
-  setText("[data-contact-kicker]", contact.kicker);
-  setText("[data-contact-title]", contact.title);
-  setText("[data-contact-description]", contact.description);
-  renderLinks("[data-contact-links]", contact.links || []);
-}
-
 function renderSite(siteContent) {
   document.documentElement.lang = siteContent.site?.language || "en";
   document.title = siteContent.site?.title || siteContent.profile?.name || "Academic Homepage";
@@ -281,7 +275,6 @@ function renderSite(siteContent) {
   renderList("[data-service-items]", siteContent.service?.items || []);
   setText("[data-service-kicker]", siteContent.service?.kicker);
   setText("[data-service-title]", siteContent.service?.title);
-  renderContact(siteContent.contact || {});
 }
 
 function initInteractions() {

@@ -161,26 +161,25 @@ button {
 }
 
 .profile-actions,
-.pub-links,
-.contact-links {
+.pub-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem 0.65rem;
 }
 
 .profile-actions {
+  display: grid;
+  gap: 0.28rem;
   margin-top: 1rem;
   line-height: 1.5;
 }
 
 .profile-actions a,
-.pub-links a,
-.contact-links a {
+.pub-links a {
   color: var(--link);
   font-weight: 500;
 }
 
-.profile-actions a::after,
 .pub-links a::after {
   color: var(--faint);
   content: "/";
@@ -188,10 +187,16 @@ button {
   font-weight: 400;
 }
 
-.profile-actions a:last-child::after,
 .pub-links a:last-child::after {
   content: "";
   margin: 0;
+}
+
+.profile-collaboration {
+  margin: 1rem 0 0;
+  color: var(--ink);
+  font-size: 0.91rem;
+  line-height: 1.55;
 }
 
 .profile-meta {
@@ -228,10 +233,6 @@ button {
   scroll-margin-top: 82px;
   padding: 0 0 2.1rem;
   border-bottom: 1px solid var(--line);
-}
-
-.contact-block {
-  border-bottom: 0;
 }
 
 .section-kicker {
@@ -481,18 +482,6 @@ button {
   color: var(--muted);
 }
 
-.contact-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
-  gap: 2rem;
-}
-
-.contact-links {
-  display: grid;
-  align-content: start;
-  gap: 0.3rem;
-}
-
 .back-top {
   position: fixed;
   right: 18px;
@@ -591,8 +580,7 @@ button {
 
   .section-heading,
   .timeline li,
-  .publication-item,
-  .contact-block {
+  .publication-item {
     grid-template-columns: 1fr;
   }
 

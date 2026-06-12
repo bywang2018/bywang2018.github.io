@@ -26,11 +26,12 @@ window.SITE_CONTENT = {
     photoAlt: "Portrait of Boying Wang",
     summary: "My research focuses on computer vision, object detection, image fusion, and image enhancement.",
     links: [
-      { label: "Email", href: "mailto:boying24@nuc.edu.cn" },
-      { label: "Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
+      { label: "boying24@nuc.edu.cn", href: "mailto:boying24@nuc.edu.cn" },
+      { label: "Google Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
       // { label: "GitHub", href: "#" },
       // { label: "CV", href: "#" }
     ],
+    collaboration: "🤝 I am open to collaborations and academic discussions. Feel free to reach out!",
     meta: [
       { label: "Office", value: "Room 508, Software Building" },
       { label: "Location", value: "Taiyuan, Shanxi" },
@@ -351,19 +352,6 @@ window.SITE_CONTENT = {
       "Reviewer: TCSVT、PR、ESWA、TII、TETCI.",
       "Program committee: ACM MM、AAAI.",
       // "Organizer: Reading group or seminar series."
-    ]
-  },
-
-  // TODO: Contact links shown at the bottom of the page.
-  contact: {
-    kicker: "Contact",
-    title: "Get In Touch",
-    description: "🤝 I am open to collaborations and academic discussions. Feel free to reach out!",
-    links: [
-      { label: "boying24@nuc.edu.cn", href: "mailto:boying24@nuc.edu.cn" },
-      { label: "Google Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
-      // { label: "ORCID", href: "#" },
-      // { label: "GitHub", href: "#" }
     ]
   }
 };
