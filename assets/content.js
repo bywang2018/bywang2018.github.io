@@ -24,7 +24,7 @@ window.SITE_CONTENT = {
     affiliation: "School of Computer Science and Technology, North University of China",
     photo: "assets/profile-placeholder.svg",
     photoAlt: "Portrait of Boying Wang",
-    summary: "My research focuses on computer vision, object detection, image fusion, and image enhancement.",
+    // summary: "My research focuses on computer vision, object detection, image fusion, and image enhancement.",
     links: [
       { label: "boying24@nuc.edu.cn", href: "mailto:boying24@nuc.edu.cn" },
       { label: "Google Scholar", href: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=g0fCzqkAAAAJ" },
@@ -35,7 +35,7 @@ window.SITE_CONTENT = {
     meta: [
       { label: "Office", value: "Room 508, Software Building" },
       { label: "Location", value: "Taiyuan, Shanxi" },
-      { label: "Focus", value: "Computer Vision, Image Fusion, Object Detection" }
+      // { label: "Focus", value: "Computer Vision, Image Fusion, Object Detection" }
     ]
   },
 
